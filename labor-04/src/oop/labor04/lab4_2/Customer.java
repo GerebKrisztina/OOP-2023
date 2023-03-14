@@ -2,14 +2,14 @@ package oop.labor04.lab4_2;
 
 import java.util.ArrayList;
 
-public class Costumer {
+public class Customer {
 
     private final String firstName;
     private String lastName;
     private BankAccount account;
     private ArrayList<BankAccount> accounts = new ArrayList<>();
 
-    public Costumer(String firstName, String lastName) {
+    public Customer(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
