@@ -1,4 +1,6 @@
-package oop.labor11;
+package oop.labor11.lab11_1;
+
+import oop.labor11.lab11_1.DateUtil;
 
 public class MyDate {
     private int year,month,day;
