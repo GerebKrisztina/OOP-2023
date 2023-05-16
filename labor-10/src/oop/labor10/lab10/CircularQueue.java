@@ -2,8 +2,21 @@ package oop.labor10.lab10;
 
 public class CircularQueue implements IQueue{
     private final int CAPACITY;
-    private Object items;
+    private Object[] items;
 
+    private int front;
+    private int rear;
+
+    public CircularQueue(int CAPACITY) {
+        this.CAPACITY = CAPACITY;
+    }
+
+    public boolean isFull(){
+        if(rear==front-1){
+            return true;
+        }
+        return false;
+    }
 
     @Override
     public boolean equals(Object o) {

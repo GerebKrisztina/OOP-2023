@@ -2,7 +2,7 @@ package oop.labor11.lab11_2;
 
 import oop.labor11.lab11_1.MyDate;
 
-public class Employee {
+public class Employee implements Comparable<Employee> {
     private final int ID;
     private String firstName;
     private String lastName;
@@ -55,5 +55,10 @@ public class Employee {
                 ", salary=" + salary +
                 ", birthDate=" + birthDate +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        return (this.lastName+this.firstName).compareTo(o.lastName+o.firstName);
     }
 }

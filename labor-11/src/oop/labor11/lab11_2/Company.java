@@ -3,9 +3,7 @@ package oop.labor11.lab11_2;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Company {
     private String name;
@@ -24,11 +22,12 @@ public class Company {
     }
 
     public void hire(Employee e) {
-        employees.add(e);
+        if(!employees.contains(e)) {
+        employees.add(e);}
     }
 
     public void hireAll(String csvFile) {
-        ArrayList<Employee> employees = new ArrayList<>();
+
         try (Scanner scanner = new Scanner(new File(csvFile))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
@@ -67,4 +66,9 @@ public class Company {
         employees.sort(comparator);
 
     }
+
+    public void sortByNaturalOrdering(){
+        Collections.sort(employees);
+    }
+
 }
