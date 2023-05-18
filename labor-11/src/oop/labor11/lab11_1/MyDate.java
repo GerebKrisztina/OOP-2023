@@ -4,7 +4,7 @@ import oop.labor11.lab11_1.DateUtil;
 
 public class MyDate {
     private int year,month,day;
-    MyDate(int year,int month,int day){
+    public MyDate(int year, int month, int day){
         if(DateUtil.isValidDate(year,month,day)){
             this.year=year;
             this.month=month;

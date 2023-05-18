@@ -26,7 +26,7 @@ public class Company {
         employees.add(e);}
     }
 
-    public void hireAll(String csvFile) {
+    public ArrayList<Employee> hireAll(String csvFile) {
 
         try (Scanner scanner = new Scanner(new File(csvFile))) {
             while (scanner.hasNextLine()) {

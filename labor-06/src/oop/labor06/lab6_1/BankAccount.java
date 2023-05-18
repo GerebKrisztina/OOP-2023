@@ -1,4 +1,7 @@
 package oop.labor06.lab6_1;
+
+import java.io.PrintStream;
+
 public class BankAccount {
 
     private static int numAccounts = 0;

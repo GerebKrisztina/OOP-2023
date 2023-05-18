@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        /*
         SavingsAccount sAccount = new SavingsAccount(1.9);
         CheckingAccount cAccount = new CheckingAccount(500);
         System.out.println(sAccount);
@@ -28,6 +29,18 @@ public class Main {
             if(ba.getClass() == CheckingAccount.class){
                 System.out.println(((CheckingAccount) ba).getOverdraftLimit());
             }
-        }
+        } */
+
+
+        ArrayList<BankAccount> accounts = new ArrayList<>();
+        Bank b = new Bank("OTP");
+        b.addCustomer(new Customer("A", "B"));
+        b.getCustomer(1).addAccount(new SavingsAccount(20));
+        b.getCustomer(1).addAccount(new CheckingAccount(200));
+        b.addCustomer(new Customer("X", "Y"));
+        b.getCustomer(2).addAccount(new SavingsAccount(500));
+        b.getCustomer(2).addAccount(new CheckingAccount(2000));
+        System.out.println(b.getCustomer(1));
+        System.out.println(b.getCustomer(2));
     }
 }

@@ -16,9 +16,14 @@ public class SavingsAccount extends BankAccount{
     public void setInterestRate(double interestRate) {
         this.interestRate = interestRate;
     }
+    public void addInterestRate() {
+        this.balance += this.balance+interestRate;
+    }
 
     @Override
     public String toString() {
-        return super.toString() + ", overdraft limit: " +
+        return "SavingsAccount{" +
+                "interestRate=" + interestRate +
+                '}';
     }
 }
