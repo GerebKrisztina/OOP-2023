@@ -39,7 +39,7 @@ public class BankAccount {
     }
     private void printCustomers( PrintStream ps ) {
         ps.println("ID, Firstname, Last name, Number of bank accounts");
-        for( Customer customer: customers ) {
+        for( Customer customer : customers) {
             ps.println( customer.getId()+", " + customer.getFirstName() + ", "+
                     customer.getLastName()+", "+customer.getNumAccounts());
         }
